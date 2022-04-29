@@ -21,4 +21,8 @@ sudo apt install fish tmux rxvt-unicode
 bash scripts/install.sh
 ```
 
-1. Reload the current configuration  / restart terminal
+4. Reload the current configuration with **`xrdb`**
+```bash
+xrdb $HOME/.Xresources
+```
+or just restart your terminal
