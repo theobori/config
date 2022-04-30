@@ -9,7 +9,12 @@ This repository every contains configuration file required for my environment.
 1. Install the dependencies
     **Debian / Ubuntu**
 ```bash
-sudo apt install fish tmux rxvt-unicode
+sudo apt install fish tmux rxvt-unicode xclip
+```
+
+**Arch Linux**
+```bash
+sudo pacman -S fish tmux rxvt-unicode xclip
 ```
 
 2. Install the font(s)
