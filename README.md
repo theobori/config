@@ -31,3 +31,11 @@ bash scripts/install.sh
 xrdb $HOME/.Xresources
 ```
 or just restart your terminal
+
+5. If you wanna use `st` instead of `urxvt`
+```bash
+git clone https://git.suckless.org/st
+cd st
+sudo make clean install
+```
+and you can replace the lines in `config.h` by ones in `st_config.txt`
