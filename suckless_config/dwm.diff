@@ -1,8 +1,15 @@
 diff --git a/config.def.h b/config.def.h
-index a2ac963..18bca83 100644
+index a2ac963..247b874 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -11,7 +11,7 @@ static const char col_gray1[]       = "#222222";
+@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const int showbar            = 1;        /* 0 means no bar */
+ static const int topbar             = 1;        /* 0 means bottom bar */
+-static const char *fonts[]          = { "monospace:size=10" };
++static const char *fonts[]          = { "monospace:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
+ static const char dmenufont[]       = "monospace:size=10";
+ static const char col_gray1[]       = "#222222";
  static const char col_gray2[]       = "#444444";
  static const char col_gray3[]       = "#bbbbbb";
  static const char col_gray4[]       = "#eeeeee";
@@ -109,6 +116,27 @@ index a2ac963..18bca83 100644
  	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
  };
 -
+diff --git a/drw.c b/drw.c
+index 4cdbcbe..2e7921b 100644
+--- a/drw.c
++++ b/drw.c
+@@ -140,11 +140,11 @@ xfont_create(Drw *drw, const char *fontname, FcPattern *fontpattern)
+ 	 * https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=916349
+ 	 * and lots more all over the internet.
+ 	 */
+-	FcBool iscol;
+-	if(FcPatternGetBool(xfont->pattern, FC_COLOR, 0, &iscol) == FcResultMatch && iscol) {
+-		XftFontClose(drw->dpy, xfont);
+-		return NULL;
+-	}
++	// FcBool iscol;
++	// if(FcPatternGetBool(xfont->pattern, FC_COLOR, 0, &iscol) == FcResultMatch && iscol) {
++	// 	XftFontClose(drw->dpy, xfont);
++	// 	return NULL;
++	// }
+ 
+ 	font = ecalloc(1, sizeof(Fnt));
+ 	font->xfont = xfont;
 diff --git a/dwm.c b/dwm.c
 index 5646a5c..0d8bba4 100644
 --- a/dwm.c
