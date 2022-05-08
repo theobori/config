@@ -1,4 +1,4 @@
-# linux config
+# linux environment configuration (de, wm, lockscreen, etc..)
 
 ## About
 
@@ -30,12 +30,7 @@ bash scripts/install.sh
 ```bash
 xrdb $HOME/.Xresources
 ```
-or just restart your terminal
 
-5. If you wanna use `st` instead of `urxvt`
-```bash
-git clone https://git.suckless.org/st
-cd st
-sudo make clean install
-```
-and you can replace the lines in `config.h` by ones in `st_config.txt`
+For suckless tools: 
+
+Replaces the lines in `config.h` by ones in `suckless_config/`
