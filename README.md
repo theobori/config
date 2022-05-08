@@ -31,4 +31,6 @@ bash scripts/install.sh
 xrdb $HOME/.Xresources
 ```
 
-5. For suckless tools config, there are git diff files in `suckless_config/`
+5. For suckless tools configuration, there are git diff files in `suckless_config/`
+
+6. Using https://github.com/joestandring/dwm-bar as status bar
