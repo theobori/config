@@ -31,6 +31,4 @@ bash scripts/install.sh
 xrdb $HOME/.Xresources
 ```
 
-For suckless tools: 
-
-Replaces the lines in `config.h` by ones in `suckless_config/`
+5. For suckless tools config, there are git diff files in `suckless_config/`
